@@ -62,15 +62,3 @@ def format(strok):
     print('{strok}'.format(strok=strok))
     print('{}'.format(strok))
 format(100.0987623432)
-
-
-
-
-
-
-
-
-
-
-
-
