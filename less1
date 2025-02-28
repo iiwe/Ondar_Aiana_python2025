@@ -1,0 +1,76 @@
+#стек
+def is_correct_brackers(s):
+    stack = []
+    for i in s:
+        if i == '(': stack.append(i)
+        elif i == ')': 
+            if len(stack) == 0: 
+                return False
+            stack.pop()
+    return not stack
+print(is_correct_brackers('(())'))
+
+# дан массив цифр прибавить 1
+def pupu(nums):
+    for i in range(len(nums)-1, -1, -1):
+        if nums[i] < 9:
+            nums[i]+=1
+            return nums
+        else: nums[i] = 0
+    return [1] + nums
+print(pupu([9,0,9]))
+
+def plus_one(nums):
+    for i, el in reversed(list(enumerate(nums))):
+        if nums[i] < 9:
+            nums[i]+=1
+            return nums
+        else: nums[i]= 0
+    return [1]+nums
+print(plus_one([1, 2, 3]))
+print(list(enumerate([1,2,3,4])))
+
+#сколько раз встречается каждый символ
+def number_of_unique(st):
+    result = {}
+    for i in st:
+        result[i] = 1 + result.get(i, 0) #ключ i
+    return result
+print(number_of_unique('assasesfg'))
+
+#сумма двух. найти два числа, что они в сумме дают наше число
+def hihi_summa(mas, res):
+    for i in range(len(mas)):
+        for j in range(i, len(mas)):
+            if mas[i] + mas[j] == res:
+                return 1, j
+print(hihi_summa([1,2,3,4], 6))
+
+#разница которой не хватает до нашего числа это ключ в словаре
+def cool_summa(mas, res): 
+    a = dict()
+    for i in range(len(mas)):
+        if mas[i] in a:
+            return i, a[mas[i]]
+        a[res-mas[i]] = i
+print(cool_summa([1,2,3,4], 6))
+
+#отформатировать строку(????)
+def format(strok):
+    print('{:*^30}'.format('{:,.3f}'.format(strok).replace(',', ' ')))
+    print(f'{strok}')
+    print('{strok}'.format(strok=strok))
+    print('{}'.format(strok))
+format(100.0987623432)
+
+
+
+
+
+
+
+
+
+
+
+
