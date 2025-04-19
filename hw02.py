@@ -39,12 +39,12 @@ def number_of_unique(st):
 print(number_of_unique('assasesfg'))
 
 #сумма двух. найти два числа, что они в сумме дают наше число
-def hihi_summa(mas, res):
+def summa(mas, res):
     for i in range(len(mas)):
         for j in range(i, len(mas)):
             if mas[i] + mas[j] == res:
                 return 1, j
-print(hihi_summa([1,2,3,4], 6))
+print(summa([1,2,3,4], 6))
 
 #разница которой не хватает до нашего числа это ключ в словаре
 def cool_summa(mas, res): 
