@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты {{ hw_name }} ({{ group_id }})</title>
+</head>
+<body>
+    <h1>Результаты {{ hw_name }}</h1>
+    <h2>Группа: {{ group_id }}</h2>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                <th>Группа</th>
+                <th>Баллы</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.group }}</td>
+                <td>{{ student.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
